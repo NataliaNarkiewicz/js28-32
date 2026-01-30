@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gradient Page</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(to top, #ffd1e8, #bfe3ff);
+      font-family: Times, sans-serif;
+      position: relative;
+    }
+
+    /* Linie */
+    .line, .line1, .line2, .line3 {
+      width: 100%;
+      height: 4px;
+      background: gray;
+      border: none;
+      position: absolute;
+      left: 0;
+    }
+
+    .line  { top: 11%; }
+    .line1 { top: 20%; }
+    .line2 { top: 30%; }
+    .line3 { top: 40%; }
+
+    /* Teksty */
+    .text {
+      font-size: 58px;
+      font-weight: bold;
+      position: absolute;
+      top: 10px;
+      right: 40px;
+    }
+
+    .text1 {
+      font-size: 28px;
+      font-weight: bold;
+      position: absolute;
+      top: 130px;
+      left: 20px;
+    }
+
+    .text2 {
+      font-size: 28px;
+      font-weight: bold;
+      position: absolute;
+      top: 320px;
+      left: 20px;
+    }
+
+    /* Kontenery na przyciski */
+    .btn-row {
+      position: absolute;
+      left: 20px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .zadania-row {
+      top: 220px;
+    }
+
+    .kody-row {
+      top: 400px;
+    }
+
+    /* Zwykłe, małe przyciski */
+    .btn {
+      font-size: 16px;
+      padding: 3px 6px;
+      background: #ffffff;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+    function WinOpen_narkiewicz_z1() {
+      window.open("zadanie1_narkiewicz.html", "okienko_z1",
+        "toolbar=no,directories=no,menubar=no,height=300,width=300,top=200,left=200");
+    }
+  </script>
+</head>
+
+<body>
+
+<p class="text"><i>Natalia Narkiewicz 3F</i></p>
+
+<hr class="line">
+
+<p class="text1"><i>Zadania</i></p>
+
+<div class="btn-row zadania-row">
+  <button class="btn" onclick="WinOpen_narkiewicz_z1()">Zadanie 24</button>
+  <button class="btn" onclick="WinOpen_narkiewicz_z1()">Zadanie 25</button>
+  <button class="btn" onclick="WinOpen_narkiewicz_z1()">Zadanie 26</button>
+  <button class="btn" onclick="WinOpen_narkiewicz_z1()">Zadanie 27</button>
+</div>
+
+<hr class="line1">
+<hr class="line2">
+
+<p class="text2"><i>Kody</i></p>
+
+<div class="btn-row kody-row">
+  <button class="btn">Kod 24</button>
+  <button class="btn">Kod 25</button>
+  <button class="btn">Kod 26</button>
+  <button class="btn">Kod 27</button>
+</div>
+
+<hr class="line3">
+
+</body>
+</html>
