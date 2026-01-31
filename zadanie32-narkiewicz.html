@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-<meta charset="UTF-8">
-<title>Zadanie 32 – Konstruktor i prototype</title>
-
-<script type="text/javascript">
-
-// ---------------------------------------------------
-// 1. KONSTRUKTOR (KLASA)
-// ---------------------------------------------------<html>
+<html>
 <head>
     <meta charset="UTF-8">
     <script type="text/javascript">
@@ -16,18 +6,19 @@
         // Obiekt Pudełko
         // ------------------------------
         var pudelko = {
-            kolor: 'czerwony',
-            rozmiar: 'średnie',
-            material: 'karton',
+            kolor: prompt("Podaj kolor pudełka:", "czerwony"),
+            rozmiar: prompt("Podaj rozmiar pudełka:", "średnie"),
+            material: prompt("Podaj materiał pudełka:", "karton"),
             pudelko_wyswietl_narkiewicz: function() {
-                document.write("Pudełko:<br>");
+                document.write("<h3>Pudełko:</h3>");
                 document.write("Kolor: " + this.kolor + "<br>");
                 document.write("Rozmiar: " + this.rozmiar + "<br>");
                 document.write("Materiał: " + this.material + "<br>");
             }
         };
+
         // Nowe pole i metoda poza obiektem
-        pudelko.waga = '2kg';
+        pudelko.waga = prompt("Podaj wagę pudełka:", "2kg");
         pudelko.pudelko_pokaz_narkiewicz = function() {
             document.write("Waga: " + this.waga + "<br><br>");
         };
@@ -48,17 +39,22 @@
                            ", dział: " + this.dzial + "<br>");
         };
 
-        // Tworzymy 3 obiekty
+        // ------------------------------
+        // Tworzymy obiekty pracowników
+        // ------------------------------
         var kierownik = new Pracownik("Różalska", "Hania", "kierownik", "administracja");
         var sekretarz = new Pracownik("Gaja", "Mariusz", "sekretarz", "biuro");
         var pracownik = new Pracownik("Narkiewicz", "Anna", "pracownik", "magazyn");
 
         // Nowe pole i metoda poza obiektem
-        kierownik.staz = "5 lat";
+        kierownik.staz = prompt("Podaj staż kierownika:", "5 lat");
         kierownik.pracownik_pokaz_narkiewicz = function() {
             document.write("Staż pracownika (kierownik): " + this.staz + "<br><br>");
         };
 
+        // ------------------------------
+        // Wyświetlanie danych
+        // ------------------------------
         document.write("<h2>Zadanie 32 – Pudełko i Pracownicy</h2>");
 
         // Pudełko
@@ -78,85 +74,5 @@
     </script>
 </head>
 <body>
-</body>
-</html>
-
-function Pudelko(kolor, szerokosc, wysokosc, material) {
-    this.kolor = kolor;
-    this.szerokosc = szerokosc;
-    this.wysokosc = wysokosc;
-    this.material = material;
-}
-
-// ---------------------------------------------------
-// 2. METODA DODANA PRZEZ PROTOTYPE
-// ---------------------------------------------------
-Pudelko.prototype.wypisz = function () {
-    return (
-        "Pudełko → kolor: " + this.kolor +
-        ", szerokość: " + this.szerokosc +
-        ", wysokość: " + this.wysokosc +
-        ", materiał: " + this.material + "<br>"
-    );
-};
-
-// ---------------------------------------------------
-// 3. TWORZENIE 3 OBIEKTÓW
-// ---------------------------------------------------
-var pud1 = new Pudelko("czerwone", 30, 20, "karton");
-var pud2 = new Pudelko("niebieskie", 40, 25, "plastik");
-var pud3 = new Pudelko("zielone", 50, 35, "drewno");
-
-// ---------------------------------------------------
-// 4. NOWA WŁAŚCIWOŚĆ POZA OBIEKTEM
-// ---------------------------------------------------
-pud1.waga = "0.5 kg";
-
-// ---------------------------------------------------
-// 5. NOWA METODA POZA OBIEKTEM
-//    nazwa: obiekt_pokaz_nazwisko
-// ---------------------------------------------------
-pud1.pudelko_pokaz_narkiewicz = function () {
-    return "Waga pudełka (pud1): " + this.waga + "<br>";
-};
-
-
-function pokazZadanie() {
-
-    var wynik = document.getElementById("wynik");
-    wynik.innerHTML = "";
-
-    wynik.innerHTML += "<h2>Zadanie 32 – Programowanie obiektowe</h2>";
-
-    wynik.innerHTML += "<b>Dane wszystkich obiektów:</b><br><br>";
-
-    wynik.innerHTML += pud1.wypisz();
-    wynik.innerHTML += pud2.wypisz();
-    wynik.innerHTML += pud3.wypisz();
-
-    wynik.innerHTML += "<br><b>Nowe pole:</b> waga (dla pud1)<br>";
-    wynik.innerHTML += "<b>Nowa metoda:</b> pudelko_pokaz_narkiewicz()<br><br>";
-
-    wynik.innerHTML += pud1.pudelko_pokaz_narkiewicz();
-}
-
-function pokazKod() {
-    alert("Kod znajduje się w sekcji <script> w pliku HTML.");
-}
-
-</script>
-</head>
-
-<body>
-
-<h1>Zadanie 32 – Obiekt pudełko (Narkiewicz)</h1>
-
-<button onclick="pokazZadanie()">Wyświetl zadanie</button>
-<button onclick="pokazKod()">Wyświetl kod</button>
-
-<hr>
-
-<div id="wynik"></div>
-
 </body>
 </html>
