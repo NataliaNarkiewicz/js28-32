@@ -1,28 +1,39 @@
-<html> 
-     <head> 
-           <script type="text/javascript"> 
-                 var pudelko = { 
-   kolor: 'czerwone', 
-   szerokosc: '40 cm', 
-   wysokosc: '30 cm', 
-   Pudelko_wyswietl_narkiewicz: function () 
-     { 
-        document.write(this.kolor + ' ' + this.szerokosc + ' ' + this.wysokosc) 
-     } 
-  } 
-  pudelko.Pudelko_wyswietl_nazwisko(); 
-            </script> 
-     </head> 
-<body> 
- <br> 
-   Programowanie obiektowe. <br> 
-     Obiekt  to  pudełko<br> 
-     Pola:<br> 
-     kolor:<br> 
-     szerokość:<br> 
-     wysokość:<br> 
-     rodzaj materiału:<br>
-  
-     metoda:  Pudelko_wyswietl_narkiewicz<br> 
-</body> 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Programowanie Obiektowe - Pudełko</title>
+    <script type="text/javascript">
+        // Definicja obiektu
+        var pudelko = {
+            kolor: 'czerwony',
+            rozmiar: 'średnie',
+            material: 'karton',
+             wielkosc: 'duży',
+            pudelko_wyswietl_narkiewicz: function() {
+                document.write(
+                    'Kolor: ' + this.kolor + '<br>' +
+                    'Rozmiar: ' + this.rozmiar + '<br>' +
+                    'Materiał: ' + this.material + '<br>' +
+                     'Wielkość: ' + this.wielkosc + '<br>'
+                );
+            }
+        };
+
+        
+        pudelko.pudelko_wyswietl_narkiewicz();
+    </script>
+</head>
+<body>
+    <h2>Programowanie obiektowe</h2>
+    <p>Obiekt to: Pudełko</p>
+    <p>Pola:</p>
+    <ul>
+        <li>Kolor</li>
+        <li>Rozmiar</li>
+        <li>Materiał</li>
+         <li> Wielkość </li>
+    </ul>
+    <p>Metoda: pudelko_wyswietl_narkiewicz</p>
+</body>
 </html>
