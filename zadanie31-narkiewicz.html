@@ -1,59 +1,77 @@
-<html>
+<!DOCTYPE html>
+<html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <script type="text/javascript">
+<meta charset="UTF-8">
+<title>Zadanie 31 – Obiekt pudełko</title>
+
+<script type="text/javascript">
 
 
-        var pudelko = {
-            kolor: "czerwone",
-            szerokosc: 30,
-            wysokosc: 20,
-            material: "karton",
-            pokaz: function () {
-                document.write("Pudełko: " + this.kolor + ", " + this.szerokosc + "cm szer., " + this.wysokosc + "cm wys.<br>");
-            }
-        };
+var pudelko = {
+    kolor: "czerwone",
+    szerokosc: 30,
+    wysokosc: 20,
+    material: "karton",
+
+    pokaz: function () {
+        document.getElementById("wynik").innerHTML +=
+            "Pudełko: " + this.kolor + ", " +
+            this.szerokosc + "cm szer., " +
+            this.wysokosc + "cm wys.<br>";
+    }
+};
 
 
-        pudelko.waga = "0.5 kg";
+pudelko.waga = "0.5 kg";
 
-    
-        pudelko_pokaz_narkiewicz = function () {
-            document.write("Waga pudełka: " + pudelko.waga + "<br>");
-        };
 
- 
-        function pokazZadanie() {
-            document.write("<h2>Programowanie obiektowe – Zadanie 31</h2>");
-            document.write("Obiekt: pudelko<br><br>");
+pudelko.pudelko_pokaz_narkiewicz = function () {
+    document.getElementById("wynik").innerHTML +=
+        "Waga pudełka: " + this.waga + "<br>";
+};
 
-            document.write("Pola obiektu:<br>");
-            document.write("- kolor<br>");
-            document.write("- szerokosc<br>");
-            document.write("- wysokosc<br>");
-            document.write("- material<br>");
-            document.write("Metoda: pokaz()<br><br>");
 
-            document.write("Nowe pole: waga<br>");
-            document.write("Nowa metoda: pudelko_pokaz_narkiewicz()<br><br>");
+function pokazZadanie() {
+    document.getElementById("wynik").innerHTML = "";
+    document.getElementById("opis").innerHTML = "";
 
-         
-            pudelko.pokaz();
-            pudelko_pokaz_narkiewicz();
-        }
+    document.getElementById("opis").innerHTML +=
+        "<h2>Programowanie obiektowe – Zadanie 31</h2>" +
+        "Obiekt: pudelko<br><br>" +
 
-        function pokazKod() {
-            alert("Kod znajduje się w sekcji <script> w pliku HTML.");
-        }
+        "Pola obiektu:<br>" +
+        "- kolor<br>" +
+        "- szerokosc<br>" +
+        "- wysokosc<br>" +
+        "- material<br>" +
+        "Metoda: pokaz()<br><br>" +
 
-    </script>
+        "Nowe pole: waga<br>" +
+        "Nowa metoda: pudelko_pokaz_narkiewicz()<br><br>";
+
+
+    pudelko.pokaz();
+    pudelko.pudelko_pokaz_narkiewicz();
+}
+
+function pokazKod() {
+    alert("Kod znajduje się w sekcji <script> w pliku HTML.");
+}
+
+</script>
 </head>
 
 <body>
-    <h1>Zadanie 31 – Obiekt pudełko</h1>
 
-    <button onclick="pokazZadanie()">Wyświetl zadanie</button>
-    <button onclick="pokazKod()">Wyświetl kod</button>
+<h1>Zadanie 31 – Obiekt pudełko</h1>
+
+<button onclick="pokazZadanie()">Wyświetl zadanie</button>
+<button onclick="pokazKod()">Wyświetl kod</button>
+
+<hr>
+
+<div id="opis"></div>
+<div id="wynik"></div>
 
 </body>
 </html>
