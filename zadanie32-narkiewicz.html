@@ -8,7 +8,79 @@
 
 // ---------------------------------------------------
 // 1. KONSTRUKTOR (KLASA)
-// ---------------------------------------------------
+// ---------------------------------------------------<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        // ------------------------------
+        // Obiekt Pudełko
+        // ------------------------------
+        var pudelko = {
+            kolor: 'czerwony',
+            rozmiar: 'średnie',
+            material: 'karton',
+            pudelko_wyswietl_narkiewicz: function() {
+                document.write("Pudełko:<br>");
+                document.write("Kolor: " + this.kolor + "<br>");
+                document.write("Rozmiar: " + this.rozmiar + "<br>");
+                document.write("Materiał: " + this.material + "<br>");
+            }
+        };
+        // Nowe pole i metoda poza obiektem
+        pudelko.waga = '2kg';
+        pudelko.pudelko_pokaz_narkiewicz = function() {
+            document.write("Waga: " + this.waga + "<br><br>");
+        };
+
+        // ------------------------------
+        // Konstruktor Pracownik
+        // ------------------------------
+        function Pracownik(nazwisko, imie, stanowisko, dzial) {
+            this.nazwisko = nazwisko;
+            this.imie = imie;
+            this.stanowisko = stanowisko;
+            this.dzial = dzial;
+        }
+
+        Pracownik.prototype.wypisz = function() {
+            document.write(this.imie + " " + this.nazwisko +
+                           " — stanowisko: " + this.stanowisko +
+                           ", dział: " + this.dzial + "<br>");
+        };
+
+        // Tworzymy 3 obiekty
+        var kierownik = new Pracownik("Różalska", "Hania", "kierownik", "administracja");
+        var sekretarz = new Pracownik("Gaja", "Mariusz", "sekretarz", "biuro");
+        var pracownik = new Pracownik("Narkiewicz", "Anna", "pracownik", "magazyn");
+
+        // Nowe pole i metoda poza obiektem
+        kierownik.staz = "5 lat";
+        kierownik.pracownik_pokaz_narkiewicz = function() {
+            document.write("Staż pracownika (kierownik): " + this.staz + "<br><br>");
+        };
+
+        document.write("<h2>Zadanie 32 – Pudełko i Pracownicy</h2>");
+
+        // Pudełko
+        pudelko.pudelko_wyswietl_narkiewicz();
+        pudelko.pudelko_pokaz_narkiewicz();
+
+        // Pracownicy
+        kierownik.wypisz();
+        sekretarz.wypisz();
+        pracownik.wypisz();
+
+        document.write("Nowe pole: staz<br>");
+        document.write("Nowa metoda: pracownik_pokaz_narkiewicz()<br><br>");
+
+        // Wywołanie metody poza obiektem
+        kierownik.pracownik_pokaz_narkiewicz();
+    </script>
+</head>
+<body>
+</body>
+</html>
+
 function Pudelko(kolor, szerokosc, wysokosc, material) {
     this.kolor = kolor;
     this.szerokosc = szerokosc;
@@ -48,9 +120,7 @@ pud1.pudelko_pokaz_narkiewicz = function () {
     return "Waga pudełka (pud1): " + this.waga + "<br>";
 };
 
-// ---------------------------------------------------
-// 6. FUNKCJE DO PRZYCISKÓW
-// ---------------------------------------------------
+
 function pokazZadanie() {
 
     var wynik = document.getElementById("wynik");
