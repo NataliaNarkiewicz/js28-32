@@ -1,0 +1,52 @@
+ <html>
+  <head>
+    <META charset="UTF-8"> 
+  </head>
+  <body>
+      <h3><b>KOD HTML</b></h3>
+      <textarea id="textarea" name="textarea" rows="20" cols="80">
+<html>
+<head>
+    <script type="text/javascript">
+      
+        var pudelko = {
+            kolor: 'czerwony',
+            rozmiar: 'średnie',
+            material: 'karton',
+            wielkosc: 'duży',
+            pudelko_wyswietl_narkiewicz: function() {
+                document.write(this.kolor + '<br>');
+                document.write(this.rozmiar + '<br>');
+                document.write(this.material + '<br>');
+                document.write(this.wielkosc + '<br>');
+            }
+        };
+
+        pudelko.pudelko_wyswietl_narkiewicz();
+
+       
+        pudelko.waga = '2kg';
+
+      
+        pudelko.pudelko_pokaz_narkiewicz = function() {
+            document.write('Waga: ' + this.waga + '<br>');
+        };
+
+      
+        pudelko.pudelko_pokaz_narkiewicz();
+    </script>
+</head>
+<body>
+    <br>
+    Programowanie obiektowe. <br>
+    Obiekt to: Pudełko<br>
+    Pola:<br>
+    Kolor<br>
+    Rozmiar<br>
+    Materiał<br>
+Wielkość <br>
+    Metoda: pudelko_wyswietl_narkiewicz<br>
+    Nowe pole to: waga<br>
+    Nowa metoda to: pudelko_pokaz_narkiewicz<br>
+</body>
+</html>
