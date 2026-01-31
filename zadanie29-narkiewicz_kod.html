@@ -1,0 +1,131 @@
+ <html>
+  <head>
+    <META charset="UTF-8"> 
+  </head>
+  <body>
+      <h3><b>KOD HTML</b></h3>
+      <textarea id="textarea" name="textarea" rows="20" cols="80">
+        <!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 29</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f2f2f2;
+    padding:30px;
+}
+
+.box{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    max-width:900px;
+    margin:auto;
+}
+
+h1{
+    font-size:34px;
+    color:#003366;
+}
+
+.answer{
+    font-size:18px;
+}
+
+pre{
+    background:#eee;
+    padding:12px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+
+
+
+<h1>1. Określanie właściwości</h1>
+<div class="answer">
+<pre>
+auto.marka = "Opel";
+auto["cena"] = 25000;
+</pre>
+</div>
+
+<h1>2. Odwołanie do pól i metod</h1>
+<div class="answer">
+<pre>
+console.log(auto.kolor);
+auto.jedz();
+</pre>
+</div>
+
+<h1>3. Cechy konstruktora</h1>
+<div class="answer">
+<ul>
+<li>uruchamia się automatycznie</li>
+<li>ma nazwę klasy</li>
+<li>nie zwraca wartości</li>
+<li>może mieć argumenty</li>
+<li>używa się z new</li>
+</ul>
+</div>
+
+<h1>4. Przykład obiektu</h1>
+<div class="answer">
+<pre>
+var osoba = {
+ nazwisko:"Kowalski",
+ imie:"Jan",
+ zawod:"piekarz",
+ wyswietl:function(){
+  document.write(this.nazwisko+" "+this.imie);
+ }
+}
+</pre>
+</div>
+
+<h1>5. This</h1>
+<div class="answer">
+this odnosi się do aktualnego obiektu.
+Pola i metody oddzielamy przecinkami.
+</div>
+
+<h1>6. Konstruktor</h1>
+<div class="answer">
+<pre>
+function Klient(nazwisko, imie){
+ this.nazwisko = nazwisko;
+ this.imie = imie;
+}
+</pre>
+</div>
+
+<h1>7. New</h1>
+<div class="answer">
+<pre>
+var osoba1 = new Klient("Kowalski","Jan");
+</pre>
+</div>
+
+<h1>8. Prototype</h1>
+<div class="answer">
+<b>Prototype pozwala dodawać wspólne metody dla wszystkich obiektów.</b>
+
+<pre>
+function Klient(){}
+
+Klient.prototype.wypisz = function(){
+ document.write("Test");
+}
+</pre>
+</div>
+
+</div>
+
+</body>
+</html>
