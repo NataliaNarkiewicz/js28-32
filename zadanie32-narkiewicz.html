@@ -2,9 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <script type="text/javascript">
-        // ------------------------------
-        // Obiekt Pudełko
-        // ------------------------------
+ 
         var pudelko = {
             kolor: prompt("Podaj kolor pudełka:", "czerwony"),
             rozmiar: prompt("Podaj rozmiar pudełka:", "średnie"),
@@ -17,15 +15,11 @@
             }
         };
 
-        // Nowe pole i metoda poza obiektem
         pudelko.waga = prompt("Podaj wagę pudełka:", "2kg");
         pudelko.pudelko_pokaz_narkiewicz = function() {
             document.write("Waga: " + this.waga + "<br><br>");
         };
 
-        // ------------------------------
-        // Konstruktor Pracownik
-        // ------------------------------
         function Pracownik(nazwisko, imie, stanowisko, dzial) {
             this.nazwisko = nazwisko;
             this.imie = imie;
@@ -39,37 +33,34 @@
                            ", dział: " + this.dzial + "<br>");
         };
 
-        // ------------------------------
-        // Tworzymy obiekty pracowników
-        // ------------------------------
+       
         var kierownik = new Pracownik("Różalska", "Hania", "kierownik", "administracja");
         var sekretarz = new Pracownik("Gaja", "Mariusz", "sekretarz", "biuro");
         var pracownik = new Pracownik("Narkiewicz", "Anna", "pracownik", "magazyn");
 
-        // Nowe pole i metoda poza obiektem
+
         kierownik.staz = prompt("Podaj staż kierownika:", "5 lat");
         kierownik.pracownik_pokaz_narkiewicz = function() {
             document.write("Staż pracownika (kierownik): " + this.staz + "<br><br>");
         };
 
-        // ------------------------------
-        // Wyświetlanie danych
-        // ------------------------------
+    
         document.write("<h2>Zadanie 32 – Pudełko i Pracownicy</h2>");
 
-        // Pudełko
+        
         pudelko.pudelko_wyswietl_narkiewicz();
         pudelko.pudelko_pokaz_narkiewicz();
 
-        // Pracownicy
+        
         kierownik.wypisz();
         sekretarz.wypisz();
         pracownik.wypisz();
 
+       
         document.write("Nowe pole: staz<br>");
         document.write("Nowa metoda: pracownik_pokaz_narkiewicz()<br><br>");
 
-        // Wywołanie metody poza obiektem
+      
         kierownik.pracownik_pokaz_narkiewicz();
     </script>
 </head>
