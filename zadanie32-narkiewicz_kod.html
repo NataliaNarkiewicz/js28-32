@@ -1,0 +1,78 @@
+
+ <html>
+  <head>
+    <META charset="UTF-8"> 
+  </head>
+  <body>
+      <h3><b>KOD HTML</b></h3>
+      <textarea id="textarea" name="textarea" rows="100" cols="100">
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+ 
+        var pudelko = {
+            kolor: prompt("Podaj kolor pudełka:", "czerwony"),
+            rozmiar: prompt("Podaj rozmiar pudełka:", "średnie"),
+            material: prompt("Podaj materiał pudełka:", "karton"),
+            pudelko_wyswietl_narkiewicz: function() {
+                document.write("<h3>Pudełko:</h3>");
+                document.write("Kolor: " + this.kolor + "<br>");
+                document.write("Rozmiar: " + this.rozmiar + "<br>");
+                document.write("Materiał: " + this.material + "<br>");
+            }
+        };
+
+        pudelko.waga = prompt("Podaj wagę pudełka:", "2kg");
+        pudelko.pudelko_pokaz_narkiewicz = function() {
+            document.write("Waga: " + this.waga + "<br><br>");
+        };
+
+        function Pracownik(nazwisko, imie, stanowisko, dzial) {
+            this.nazwisko = nazwisko;
+            this.imie = imie;
+            this.stanowisko = stanowisko;
+            this.dzial = dzial;
+        }
+
+        Pracownik.prototype.wypisz = function() {
+            document.write(this.imie + " " + this.nazwisko +
+                           " — stanowisko: " + this.stanowisko +
+                           ", dział: " + this.dzial + "<br>");
+        };
+
+       
+        var kierownik = new Pracownik("Różalska", "Hania", "kierownik", "administracja");
+        var sekretarz = new Pracownik("Gaja", "Mariusz", "sekretarz", "biuro");
+        var pracownik = new Pracownik("Narkiewicz", "Anna", "pracownik", "magazyn");
+
+
+        kierownik.staz = prompt("Podaj staż kierownika:", "5 lat");
+        kierownik.pracownik_pokaz_narkiewicz = function() {
+            document.write("Staż pracownika (kierownik): " + this.staz + "<br><br>");
+        };
+
+    
+        document.write("<h2>Zadanie 32 – Pudełko i Pracownicy</h2>");
+
+        
+        pudelko.pudelko_wyswietl_narkiewicz();
+        pudelko.pudelko_pokaz_narkiewicz();
+
+        
+        kierownik.wypisz();
+        sekretarz.wypisz();
+        pracownik.wypisz();
+
+       
+        document.write("Nowe pole: staz<br>");
+        document.write("Nowa metoda: pracownik_pokaz_narkiewicz()<br><br>");
+
+      
+        kierownik.pracownik_pokaz_narkiewicz();
+    </script>
+</head>
+<body>
+</body>
+</html>
