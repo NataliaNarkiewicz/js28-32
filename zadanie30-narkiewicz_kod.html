@@ -1,0 +1,48 @@
+
+
+ <html>
+  <head>
+    <META charset="UTF-8"> 
+  </head>
+  <body>
+      <h3><b>KOD HTML</b></h3>
+      <textarea id="textarea" name="textarea" rows="20" cols="80">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Programowanie Obiektowe - Pudełko</title>
+    <script type="text/javascript">
+        // Definicja obiektu
+        var pudelko = {
+            kolor: 'czerwony',
+            rozmiar: 'średnie',
+            material: 'karton',
+             wielkosc: 'duży',
+            pudelko_wyswietl_narkiewicz: function() {
+                document.write(
+                    'Kolor: ' + this.kolor + '<br>' +
+                    'Rozmiar: ' + this.rozmiar + '<br>' +
+                    'Materiał: ' + this.material + '<br>' +
+                     'Wielkość: ' + this.wielkosc + '<br>'
+                );
+            }
+        };
+
+        
+        pudelko.pudelko_wyswietl_narkiewicz();
+    </script>
+</head>
+<body>
+    <h2>Programowanie obiektowe</h2>
+    <p>Obiekt to: Pudełko</p>
+    <p>Pola:</p>
+    <ul>
+        <li>Kolor</li>
+        <li>Rozmiar</li>
+        <li>Materiał</li>
+         <li> Wielkość </li>
+    </ul>
+    <p>Metoda: pudelko_wyswietl_narkiewicz</p>
+</body>
+</html>
